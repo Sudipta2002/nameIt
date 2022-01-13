@@ -4,7 +4,7 @@ import ResultContainer from '../ResultContainer/ResultContainer';
 import SearchBox from '../SearchBox/SearchBox';
 import'./App.css';
 
-const name= require('@rstacruz/startup-name-generator');
+const name= require('        @rstacruz/startup-name-generator');
 //class based component
 class App extends React.Component{
     state={
@@ -14,8 +14,6 @@ class App extends React.Component{
     };
 
     handleInputChange=(inputText)=>{
-        // console.log('Input text-',inputText);
-       
         this.setState({headerExpanded: !(inputText.length>0),suggestedNames: (inputText.length>0)? name(inputText):[],});
     };
 
@@ -32,11 +30,5 @@ class App extends React.Component{
         );
     }
 }
-
-
-//function based component
-// function App(){
-//     return <h1>This is my functional component</h1>
-// }
 
 export default App;
